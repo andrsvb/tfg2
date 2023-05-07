@@ -1,0 +1,904 @@
+{
+    "exam": "test_qr",
+    "variant": "22222",
+    "num_boxes": 67,
+    "exercises": [
+        {
+            "exercise": "vf1",
+            "checkboxes": [
+                {
+                    "checkbox": "0,0",
+                    "cords": [
+                        525,
+                        2449,
+                        72,
+                        71
+                    ],
+                    "page": "1",
+                    "is_marked": true
+                },
+                {
+                    "checkbox": "0,1",
+                    "cords": [
+                        525,
+                        2533,
+                        72,
+                        72
+                    ],
+                    "page": "1",
+                    "is_marked": false
+                }
+            ],
+            "student_marked": [
+                "0,0"
+            ]
+        },
+        {
+            "exercise": "vf2",
+            "checkboxes": [
+                {
+                    "checkbox": "1,0",
+                    "cords": [
+                        525,
+                        2764,
+                        72,
+                        71
+                    ],
+                    "page": "1",
+                    "is_marked": true
+                },
+                {
+                    "checkbox": "1,1",
+                    "cords": [
+                        525,
+                        2848,
+                        72,
+                        72
+                    ],
+                    "page": "1",
+                    "is_marked": false
+                }
+            ],
+            "student_marked": [
+                "1,0"
+            ]
+        },
+        {
+            "exercise": "vf3",
+            "checkboxes": [
+                {
+                    "checkbox": "2,0",
+                    "cords": [
+                        525,
+                        3074,
+                        72,
+                        72
+                    ],
+                    "page": "1",
+                    "is_marked": true
+                },
+                {
+                    "checkbox": "2,1",
+                    "cords": [
+                        525,
+                        3159,
+                        73,
+                        72
+                    ],
+                    "page": "1",
+                    "is_marked": false
+                }
+            ],
+            "student_marked": [
+                "2,0"
+            ]
+        },
+        {
+            "exercise": "vf4",
+            "checkboxes": [
+                {
+                    "checkbox": "3,0",
+                    "cords": [
+                        525,
+                        3384,
+                        72,
+                        85
+                    ],
+                    "page": "1",
+                    "is_marked": true
+                },
+                {
+                    "checkbox": "3,1",
+                    "cords": [
+                        525,
+                        3470,
+                        72,
+                        72
+                    ],
+                    "page": "1",
+                    "is_marked": false
+                }
+            ],
+            "student_marked": [
+                "3,0"
+            ]
+        },
+        {
+            "exercise": "vf5",
+            "checkboxes": [
+                {
+                    "checkbox": "4,0",
+                    "cords": [
+                        524,
+                        3700,
+                        74,
+                        73
+                    ],
+                    "page": "1",
+                    "is_marked": true
+                },
+                {
+                    "checkbox": "4,1",
+                    "cords": [
+                        525,
+                        3786,
+                        72,
+                        71
+                    ],
+                    "page": "1",
+                    "is_marked": false
+                }
+            ],
+            "student_marked": [
+                "4,0"
+            ]
+        },
+        {
+            "exercise": "vf6",
+            "checkboxes": [
+                {
+                    "checkbox": "5,0",
+                    "cords": [
+                        524,
+                        3999,
+                        73,
+                        84
+                    ],
+                    "page": "1",
+                    "is_marked": true
+                },
+                {
+                    "checkbox": "5,1",
+                    "cords": [
+                        523,
+                        4097,
+                        74,
+                        73
+                    ],
+                    "page": "1",
+                    "is_marked": false
+                }
+            ],
+            "student_marked": [
+                "5,0"
+            ]
+        },
+        {
+            "exercise": "mul1",
+            "checkboxes": [
+                {
+                    "checkbox": "6,0",
+                    "cords": [
+                        576,
+                        650,
+                        72,
+                        73
+                    ],
+                    "page": "2",
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "6,1",
+                    "cords": [
+                        576,
+                        736,
+                        72,
+                        73
+                    ],
+                    "page": "2",
+                    "is_marked": true
+                },
+                {
+                    "checkbox": "6,2",
+                    "cords": [
+                        575,
+                        822,
+                        72,
+                        71
+                    ],
+                    "page": "2",
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "6,3",
+                    "cords": [
+                        575,
+                        906,
+                        72,
+                        73
+                    ],
+                    "page": "2",
+                    "is_marked": false
+                }
+            ],
+            "student_marked": [
+                "6,1"
+            ]
+        },
+        {
+            "exercise": "mul2",
+            "checkboxes": [
+                {
+                    "checkbox": "7,0",
+                    "cords": [
+                        575,
+                        1136,
+                        71,
+                        73
+                    ],
+                    "page": "2",
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "7,1",
+                    "cords": [
+                        575,
+                        1222,
+                        71,
+                        70
+                    ],
+                    "page": "2",
+                    "is_marked": true
+                },
+                {
+                    "checkbox": "7,2",
+                    "cords": [
+                        574,
+                        1305,
+                        72,
+                        71
+                    ],
+                    "page": "2",
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "7,3",
+                    "cords": [
+                        574,
+                        1389,
+                        72,
+                        71
+                    ],
+                    "page": "2",
+                    "is_marked": false
+                }
+            ],
+            "student_marked": [
+                "7,1"
+            ]
+        },
+        {
+            "exercise": "mul3",
+            "checkboxes": [
+                {
+                    "checkbox": "8,0",
+                    "cords": [
+                        574,
+                        1618,
+                        72,
+                        72
+                    ],
+                    "page": "2",
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "8,1",
+                    "cords": [
+                        574,
+                        1703,
+                        72,
+                        72
+                    ],
+                    "page": "2",
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "8,2",
+                    "cords": [
+                        573,
+                        1787,
+                        84,
+                        72
+                    ],
+                    "page": "2",
+                    "is_marked": true
+                },
+                {
+                    "checkbox": "8,3",
+                    "cords": [
+                        574,
+                        1872,
+                        71,
+                        71
+                    ],
+                    "page": "2",
+                    "is_marked": false
+                }
+            ],
+            "student_marked": [
+                "8,2"
+            ]
+        },
+        {
+            "exercise": "mul4",
+            "checkboxes": [
+                {
+                    "checkbox": "9,0",
+                    "cords": [
+                        574,
+                        2105,
+                        71,
+                        72
+                    ],
+                    "page": "2",
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "9,1",
+                    "cords": [
+                        573,
+                        2189,
+                        72,
+                        72
+                    ],
+                    "page": "2",
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "9,2",
+                    "cords": [
+                        574,
+                        2274,
+                        71,
+                        72
+                    ],
+                    "page": "2",
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "9,3",
+                    "cords": [
+                        573,
+                        2347,
+                        72,
+                        82
+                    ],
+                    "page": "2",
+                    "is_marked": true
+                }
+            ],
+            "student_marked": [
+                "9,3"
+            ]
+        },
+        {
+            "exercise": "mul5",
+            "checkboxes": [
+                {
+                    "checkbox": "10,0",
+                    "cords": [
+                        573,
+                        2591,
+                        72,
+                        72
+                    ],
+                    "page": "2",
+                    "is_marked": true
+                },
+                {
+                    "checkbox": "10,1",
+                    "cords": [
+                        573,
+                        2675,
+                        73,
+                        73
+                    ],
+                    "page": "2",
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "10,2",
+                    "cords": [
+                        574,
+                        2761,
+                        71,
+                        72
+                    ],
+                    "page": "2",
+                    "is_marked": false
+                }
+            ],
+            "student_marked": [
+                "10,0"
+            ]
+        },
+        {
+            "exercise": "mul6",
+            "checkboxes": [
+                {
+                    "checkbox": "11,0",
+                    "cords": [
+                        573,
+                        2994,
+                        73,
+                        72
+                    ],
+                    "page": "2",
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "11,1",
+                    "cords": [
+                        573,
+                        3078,
+                        72,
+                        72
+                    ],
+                    "page": "2",
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "11,2",
+                    "cords": [
+                        573,
+                        3156,
+                        72,
+                        78
+                    ],
+                    "page": "2",
+                    "is_marked": true
+                },
+                {
+                    "checkbox": "11,3",
+                    "cords": [
+                        573,
+                        3246,
+                        72,
+                        72
+                    ],
+                    "page": "2",
+                    "is_marked": false
+                }
+            ],
+            "student_marked": [
+                "11,2"
+            ]
+        },
+        {
+            "exercise": "mul7",
+            "checkboxes": [
+                {
+                    "checkbox": "12,0",
+                    "cords": [
+                        573,
+                        3475,
+                        72,
+                        71
+                    ],
+                    "page": "2",
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "12,1",
+                    "cords": [
+                        572,
+                        3559,
+                        73,
+                        71
+                    ],
+                    "page": "2",
+                    "is_marked": true
+                },
+                {
+                    "checkbox": "12,2",
+                    "cords": [
+                        573,
+                        3643,
+                        72,
+                        72
+                    ],
+                    "page": "2",
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "12,3",
+                    "cords": [
+                        573,
+                        3727,
+                        72,
+                        71
+                    ],
+                    "page": "2",
+                    "is_marked": false
+                }
+            ],
+            "student_marked": [
+                "12,1"
+            ]
+        },
+        {
+            "exercise": "mul8",
+            "checkboxes": [
+                {
+                    "checkbox": "13,0",
+                    "cords": [
+                        527,
+                        700,
+                        72,
+                        71
+                    ],
+                    "page": "3",
+                    "is_marked": true
+                },
+                {
+                    "checkbox": "13,1",
+                    "cords": [
+                        527,
+                        784,
+                        72,
+                        72
+                    ],
+                    "page": "3",
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "13,2",
+                    "cords": [
+                        527,
+                        868,
+                        72,
+                        71
+                    ],
+                    "page": "3",
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "13,3",
+                    "cords": [
+                        527,
+                        953,
+                        72,
+                        70
+                    ],
+                    "page": "3",
+                    "is_marked": false
+                }
+            ],
+            "student_marked": [
+                "13,0"
+            ]
+        },
+        {
+            "exercise": "mul9",
+            "checkboxes": [
+                {
+                    "checkbox": "14,0",
+                    "cords": [
+                        527,
+                        1182,
+                        72,
+                        71
+                    ],
+                    "page": "3",
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "14,1",
+                    "cords": [
+                        527,
+                        1266,
+                        72,
+                        72
+                    ],
+                    "page": "3",
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "14,2",
+                    "cords": [
+                        527,
+                        1351,
+                        72,
+                        71
+                    ],
+                    "page": "3",
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "14,3",
+                    "cords": [
+                        526,
+                        1435,
+                        73,
+                        73
+                    ],
+                    "page": "3",
+                    "is_marked": true
+                }
+            ],
+            "student_marked": [
+                "14,3"
+            ]
+        },
+        {
+            "exercise": "mul10",
+            "checkboxes": [
+                {
+                    "checkbox": "15,0",
+                    "cords": [
+                        527,
+                        1673,
+                        73,
+                        72
+                    ],
+                    "page": "3",
+                    "is_marked": true
+                },
+                {
+                    "checkbox": "15,1",
+                    "cords": [
+                        528,
+                        1758,
+                        71,
+                        72
+                    ],
+                    "page": "3",
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "15,2",
+                    "cords": [
+                        527,
+                        1843,
+                        72,
+                        72
+                    ],
+                    "page": "3",
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "15,3",
+                    "cords": [
+                        527,
+                        1928,
+                        72,
+                        72
+                    ],
+                    "page": "3",
+                    "is_marked": false
+                }
+            ],
+            "student_marked": [
+                "15,0"
+            ]
+        },
+        {
+            "exercise": "mul11",
+            "checkboxes": [
+                {
+                    "checkbox": "16,0",
+                    "cords": [
+                        528,
+                        2163,
+                        72,
+                        72
+                    ],
+                    "page": "3",
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "16,1",
+                    "cords": [
+                        528,
+                        2247,
+                        72,
+                        72
+                    ],
+                    "page": "3",
+                    "is_marked": true
+                },
+                {
+                    "checkbox": "16,2",
+                    "cords": [
+                        528,
+                        2332,
+                        71,
+                        72
+                    ],
+                    "page": "3",
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "16,3",
+                    "cords": [
+                        528,
+                        2417,
+                        72,
+                        71
+                    ],
+                    "page": "3",
+                    "is_marked": false
+                }
+            ],
+            "student_marked": [
+                "16,1"
+            ]
+        },
+        {
+            "exercise": "mul12",
+            "checkboxes": [
+                {
+                    "checkbox": "17,0",
+                    "cords": [
+                        528,
+                        2652,
+                        72,
+                        73
+                    ],
+                    "page": "3",
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "17,1",
+                    "cords": [
+                        528,
+                        2738,
+                        72,
+                        71
+                    ],
+                    "page": "3",
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "17,2",
+                    "cords": [
+                        529,
+                        2822,
+                        71,
+                        72
+                    ],
+                    "page": "3",
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "17,3",
+                    "cords": [
+                        528,
+                        2907,
+                        73,
+                        73
+                    ],
+                    "page": "3",
+                    "is_marked": true
+                }
+            ],
+            "student_marked": [
+                "17,3"
+            ]
+        },
+        {
+            "exercise": "mul13",
+            "checkboxes": [
+                {
+                    "checkbox": "18,0",
+                    "cords": [
+                        529,
+                        3199,
+                        73,
+                        71
+                    ],
+                    "page": "3",
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "18,1",
+                    "cords": [
+                        529,
+                        3283,
+                        72,
+                        72
+                    ],
+                    "page": "3",
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "18,2",
+                    "cords": [
+                        529,
+                        3367,
+                        72,
+                        73
+                    ],
+                    "page": "3",
+                    "is_marked": true
+                },
+                {
+                    "checkbox": "18,3",
+                    "cords": [
+                        529,
+                        3453,
+                        73,
+                        73
+                    ],
+                    "page": "3",
+                    "is_marked": false
+                }
+            ],
+            "student_marked": [
+                "18,2"
+            ]
+        },
+        {
+            "exercise": "mul14",
+            "checkboxes": [
+                {
+                    "checkbox": "19,0",
+                    "cords": [
+                        529,
+                        3680,
+                        73,
+                        73
+                    ],
+                    "page": "3",
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "19,1",
+                    "cords": [
+                        529,
+                        3766,
+                        73,
+                        73
+                    ],
+                    "page": "3",
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "19,2",
+                    "cords": [
+                        529,
+                        3853,
+                        72,
+                        71
+                    ],
+                    "page": "3",
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "19,3",
+                    "cords": [
+                        529,
+                        3937,
+                        72,
+                        73
+                    ],
+                    "page": "3",
+                    "is_marked": true
+                }
+            ],
+            "student_marked": [
+                "19,3"
+            ]
+        }
+    ]
+}
