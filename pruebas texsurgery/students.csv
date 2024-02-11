@@ -1,0 +1,5 @@
+name,surname,id,email,username,password,software
+BOLI,NEGRO,11111,1@example.com,negro,xxx,sage
+BOLI,AZUL,22222,2@example.com,azul,xxx,python
+FILLED,3,33333,3@example.com,f3,xxx,sage
+FILLED,4,44444,4@example.com,f4,xxx,python
