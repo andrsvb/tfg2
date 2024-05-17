@@ -1,0 +1,10 @@
+AUTOQCM[VAR:project:pdfform=0]
+
+AUTOQCM[NUM=1=test_suma]
+
+AUTOQCM[FQ]
+
+AUTOQCM[NUM=2=test_par]
+
+AUTOQCM[FQ]
+
