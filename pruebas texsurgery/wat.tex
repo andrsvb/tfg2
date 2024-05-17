@@ -1,0 +1,41 @@
+\documentclass[a4paper]{article}
+\usepackage[python3]{texsurgery}
+\usepackage[bloc,completemulti,pdfform,nowatermark,correc]{automultiplechoice}
+
+
+
+\title{Test sustitucion con texsurgery}
+\author{andres}
+
+\begin{document}
+
+\begin{run}
+    import numpy as np
+    seed = 1234
+    np.random.seed(seed)
+    a = np.random.randint(1,101)
+    b = np.random.randint(1,101)
+    print(f'Generados numeros a = {a} y b = {b} con la semilla {seed}')
+\end{run} \newline \newline
+
+\begin{question}{test_suma}
+    ¿Cuál es el resultado de la suma: $\eval{a} + \eval{b}$?
+    \begin{choices}
+        \wrongchoice{\eval{a+b+1}}
+        \correctchoice{\eval{a+b}}
+        \wrongchoice{\eval{a+b-1}}
+        \wrongchoice{\eval{a+b-2}}
+    \end{choices}
+\end{question}
+
+
+\begin{question}{test_par}
+    ¿El resultado de la suma es par o impar?
+    \begin{choices}
+        \correctchoice{\sif{divmod((a + b), 2)[1] == 0}{Par}{Impar}}
+        \wrongchoice{\sif{divmod((a + b), 2)[1] == 0}{Impar}{Par}}
+    \end{choices}
+\end{question}
+
+
+\end{document}

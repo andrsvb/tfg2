@@ -1,6 +1,6 @@
 \documentclass[a4paper]{article}
 \usepackage[python3]{texsurgery}
-\usepackage{automultiplechoice}
+\usepackage[bloc,completemulti,pdfform,nowatermark,correc]{automultiplechoice}
 
 
 
@@ -32,8 +32,8 @@
 \begin{question}{test_par}
     ¿El resultado de la suma es par o impar?
     \begin{choices}
-        \correctchoice{\sif{divmod((a + b), 2) == 0}{Par}{Impar}}
-        \wrongchoice{\sif{divmod((a + b), 2) == 0}{Impar}{Par}}
+        \correctchoice{\sif{divmod((a + b), 2)[1] == 0}{Par}{Impar}}
+        \wrongchoice{\sif{divmod((a + b), 2)[1] == 0}{Impar}{Par}}
     \end{choices}
 \end{question}
 
