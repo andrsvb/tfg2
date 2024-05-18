@@ -1,0 +1,3 @@
+name,surname,id,email,username,password,software
+FULANO,DE TAL Y PASCUAL,10003,fulano@example.com,fulano,xxx,sage
+MENGANO,PI,12345,mengano@example.com,mengano,xxx,python

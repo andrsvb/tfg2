@@ -1,0 +1,138 @@
+﻿\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage[spanish]{babel}
+\usepackage{tcolorbox}
+\usepackage[python3]{texsurgery}
+
+\usepackage{a4wide}
+
+\usepackage{amsmath,amssymb,mathrsfs,amsthm,mathtools} % Matemáticas varias
+
+
+% --- Para el encabezado
+%\usepackage{fancyhdr}
+%\fancyhead[L]{\textsf{Control XX} (XX/XX/XX)}\fancyhead[R]{\textsf{Cálculo I -- Escuela de Navales -- UPM}}\fancyfoot[C]{\thepage}
+%\pagestyle{fancy}
+
+
+\title{Examen de prueba pyexams}
+\author{Andres Bartolome}
+
+\makeatletter
+\newcommand{\AffichageSiCorrige}[1]{\ifAMC@correc #1\newline \fi}
+\makeatother
+
+\usepackage{listings}
+\lstset{
+upquote=true,
+columns=fullflexible,
+basicstyle=\ttfamily,
+}
+
+% --- Mates
+%\DeclareMathOperator{\sen}{sen}
+
+% -- Ambientes Ejercicio y Solucion
+\theoremstyle{definition}
+\newtheorem*{ejercicio}{Ejercicio}
+\newtheorem*{solucion}{Soluci\'on}
+
+
+%#########################################################################
+% Document
+%#########################################################################
+\begin{document}
+
+
+\begin{runsilent}
+from random import seed, randint
+import numpy as np
+seed(\seed)
+np.random.seed(\seed)
+\end{runsilent}
+
+
+% =================================================================
+% ENUNCIADO
+% =================================================================
+\begin{question}{pregunta}
+\begin{ejercicio}
+
+\begin{runsilent}
+sin_cos = randint(0,1)
+\end{runsilent}
+
+    ecuación con funciones complejas \\
+    \begin{tcolorbox}[colback=blue!10!white,colframe=blue!90!black,fonttitle=\bfseries,title=MOODLE]
+        Hallar todos los $z \in \mathbb C$ verificando:
+        \begin{equation*}
+            \sif{sin_cos}{(1-2i)\sin{z}=-\frac{5}{3}+\frac{10}{3}i}{(-1+2i)\cos{z}=\frac{8}{3}+\frac{4}{3}i}
+        \end{equation*}
+        (La respuesta se ha de dar de forma exacta. Detallar la respuesta y los c\'alculos que llevan a ella EN UN SOLO PDF que se ha de adjuntar a esta pregunta. En el mismo PDF debe aparecer tanto el nombre y apellidos del alumno/a así como un documento de identidad.)
+    \end{tcolorbox}
+\end{ejercicio}
+
+\bigskip
+
+
+
+
+% =================================================================
+% SOLUCION
+% % =================================================================
+
+\end{question}
+\AffichageSiCorrige{ 	
+%\begin{solucion}
+  Aplicando la definición, expresamos la función trigonométrica compleja en función de exponenciales complejas:
+  \begin{equation*}
+      \sif{sin_cos}{\sin{z}=\frac{e^{iz}-e^{-iz}}{2i}}{\cos{z}=\frac{e^{iz}+e^{-iz}}{2}}
+  \end{equation*}
+  Sustituyendo en la equación original, obtenemos
+  \begin{equation*}
+      \sif{sin_cos}{(1-2i)\frac{e^{iz}-e^{-iz}}{2i}=-\frac{5}{3}+\frac{10}{3}i}{(-1+2i)\frac{e^{iz}+e^{-iz}}{2}=\frac{8}{3}+\frac{4}{3}i}
+  \end{equation*}
+  Operando, obtenemos la siguiente igualdad
+  \begin{equation*}
+  \begin{split}
+      \sif{sin_cos}{e^{iz}-e^{-iz}&=\frac{(-\frac{5}{3}+\frac{10}{3}i)2i}{1-2i}\\&=\frac{(-\frac{20}{3}-\frac{10}{3}i)(1+2i)}{(1-2i)(1+2i)}\\&=\frac{-\frac{50}{3}i}{5}\\&=-\frac{10}{3}i}{e^{iz}+e^{-iz}&=\frac{(\frac{8}{3}+\frac{4}{3}i)2}{-1+2i}\\&=\frac{(\frac{16}{3}+\frac{8}{3}i)(-1-2i)}{(-1+2i)(-1-2i)}\\&=\frac{-\frac{40}{3}i}{5}\\&=-\frac{8}{3}i}
+  \end{split}
+  \end{equation*}
+  Por lo que
+  \begin{equation*}
+      \sif{sin_cos}{e^{iz}-e^{-iz}-(-\frac{10}{3}i)=0}{e^{iz}+e^{-iz}-(-\frac{8}{3}i)=0}
+  \end{equation*}
+  Multiplicando todo por $e^{iz}$, nos queda:
+  \begin{equation*}
+      \sif{sin_cos}{e^{2iz}+\frac{10}{3}ie^{-iz}-1=0}{e^{2iz}+\frac{8}{3}ie^{-iz}+1=0}
+  \end{equation*}
+  Ahora, haciendo el cambio de variable $w=e^{iz}$, lo anterior es equivalente a obtener las soluciones del polinomio de grado 2:
+  \begin{equation*}
+      \sif{sin_cos}{w^2+\frac{10}{3}iw-1=0}{w^2+\frac{8}{3}iw+1=0}
+  \end{equation*}
+  Las raíces son:
+  \begin{equation*}
+      \sif{sin_cos}{w=\frac{-\frac{10}{3}i \pm \sqrt{(-\frac{10}{3}i)^2-4(-1)}}{2}=\frac{-\frac{10}{3}i \pm \sqrt{-\frac{64}{9}}}{2}=\frac{-\frac{10}{3}i \pm \frac{8}{3}i}{2}=-\frac{5}{3}i \pm \frac{4}{3}i}{w=\frac{-\frac{8}{3}i \pm \sqrt{(-\frac{8}{3}i)^2-4(1)}}{2}=\frac{-\frac{8}{3}i \pm \sqrt{-\frac{100}{9}}}{2}=\frac{-\frac{8}{3}i \pm \frac{10}{3}i}{2}=-\frac{4}{3}i \pm \frac{5}{3}i}
+  \end{equation*}
+  Ahora, para cada raíz
+  \begin{align*}
+      \sif{sin_cos}{w_1&=-\frac{1}{3}i & &y & w_2&=-3i}{w_1&=\frac{1}{3}i & &y & w_2&=-3i}
+  \end{align*}
+  debemos resolver la correspondiente ecuación $e^{iz}=w_j$, para deshacer el cambio de variables en cada caso y obtener todas las familias de soluciones.
+  
+ -\underline{$e^{iz}=w_1$}: como \sif{sin_cos}{$-\frac{1}{3}i=(\frac{1}{3})e^{-\frac{\pi}{2}i}$}{$\frac{1}{3}i=(\frac{1}{3})e^{\frac{\pi}{2}i}$}, tomando logaritmos, obtenemos:
+      \begin{align*}
+          \sif{sin_cos}{iz=\ln{\frac{1}{3}}&+i(-\frac{\pi}{2}+2\pi k)\\\Longrightarrow z=-i\ln{\frac{1}{3}}+(-\frac{\pi}{2}+2\pi k)&\Longrightarrow \fbox{$z=i\ln{3}+(\frac{\pi}{2}+2\pi k)$, \: con $k \in \mathbb Z$}}{iz=\ln{\frac{1}{3}}&+i(\frac{\pi}{2}+2\pi k)\\\Longrightarrow z=-i\ln{\frac{1}{3}}+(\frac{\pi}{2}+2\pi k)&\Longrightarrow \fbox{$z=i\ln{3}+(\frac{\pi}{2}+2\pi k)$, \: con $k \in \mathbb Z$}}
+      \end{align*}
+  - \underline{$e^{iz}=w_2$}: análogamente $-3i=(3)e^{-\frac{\pi}{2}i}$. Tomando logaritmos de nuevo:
+      \begin{align*}
+          iz=\ln{3}&+i(-\frac{\pi}{2}+2\pi k)\\
+          \Longrightarrow z=-i\ln{3}+(-\frac{\pi}{2}+2\pi k)
+          &\Longrightarrow \fbox{$z=i\ln{\frac{1}{3}}+(-\frac{\pi}{2}+2\pi k)$, \: con $k \in \mathbb Z$}
+      \end{align*}  
+%\end{solucion}
+}
+
+\end{document}
+
