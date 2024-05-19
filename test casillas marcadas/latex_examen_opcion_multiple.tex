@@ -1,0 +1,650 @@
+\documentclass[a4paper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{graphics}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{cancel}
+\usepackage{ragged2e}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage[python3]{texsurgery}
+
+\setlength{\multicolsep}{0.6em}
+
+%%%%%% ---header
+
+\title{Test de formas de marcar casillas}
+\author{andres}
+
+\begin{document}
+
+\begin{center}
+Primavera 2018 \\
+\textbf{Examen Extraordinario de Matemáticas II } \\
+2do Semestre \\
+Salón 41
+\end{center}
+\extraheadheight{-0.5in}
+
+\begin{runsilent}
+from random import seed, randint
+from sympy.printing import latex
+seed(\seed)
+\end{runsilent}
+
+%%% --- examen
+
+\runningheadrule \extraheadheight{0.1in}
+
+
+\runningheadrule \extraheadheight{0.14in}
+
+%%% --- encabezado
+\runningheader{Matemáticas II }{Examen Extraordinario - 2da Oportunidad}{Primavera 2018}
+
+%%% --- pie de pagina
+\runningfooter{2do Semestre}
+              {\thepage\ of \numpages}
+              {Versión A}
+
+
+%%% --- enunciado
+\nopointsinmargin
+\setlength\linefillthickness{0.1pt}
+\setlength\answerlinelength{0.1in}
+\vspace{0.25in}
+\parbox{6in}{
+\textbf{Objetivo:} Evaluar las competencias descritas en el programa analítico referentes a la resolución de ecuaciones cuadráticas, identificación y uso de elementos geométricos y uso de la trigonometría en problemas aplicados a contextos reales. }
+
+
+\parbox{6in}{{\textbf{Instrucciones Generales:} Lee tu examen cuidadosamente. Pon atención a los detalles. Llena cuidadosamente tu hoja de respuestas ( no olvides marcar también la respuesta en tu examen). Asegúrate que tu calculadora esté en modo \textit{DEG}, y no \textit{RAD}. }
+}
+
+ \begin{center}
+\fbox{\fbox{\parbox{6in}{
+\begin{itemize}
+    \item Tienes 120 minutos para contestar este examen.
+    
+    \item Puedes utilizar calculadora y formulario. No puedes utilizar ningún otro tipo de dispositivo como calculadora. Si no tienes calculadora, deberás esperar a que alguien algún compañero termine y entregue su examen. 
+
+    \item Cuando termines, no olvides entregar tanto tu examen como tu  \textit{scantron}. 
+
+\end{itemize} }}}
+\vspace{0.2in}
+\end{center}
+
+%%% --- preguntas de verdadero/falso
+\parbox{6in}{\textsc{{LADO A}}
+
+
+\parbox{5in}{
+{\textsc{\textbf{Parte I.} Verdadero or Falso.}}}}
+
+
+\hrule 
+
+
+%%% --- pregunta vf1
+\begin{question}{v_f1}
+Si \(a\) es una solución para una ecuación, entonces \((x + a)\) es un factor de la ecuación. 
+
+\begin{choices}
+    \choice Verdadero
+    \choice Falso
+\end{choices}
+
+ 
+\end{question}
+
+%%% --- pregunta vf2
+\begin{question}{v_f2}
+El coeficiente de \(5x^2\) es \(2\).
+
+\begin{choices}
+    \choice Verdadero
+    \choice Falso
+\end{choices}
+
+
+\end{question}
+
+%%% --- pregunta vf3
+\begin{question}{v_f3}
+
+Los ángulos son funciones de los lados
+
+\begin{choices}
+    \choice Verdadero
+    \choice Falso
+\end{choices}
+ 
+\end{question}
+
+%%% --- pregunta vf4
+\begin{question}{v_f4}
+
+Todo triángulo acutángulo tiene sus tres lados de distinta longitud
+
+\begin{choices}
+    \choice Verdadero
+    \choice Falso
+\end{choices}
+ 
+\end{question}
+
+%%% --- pregunta vf5
+\begin{question}{v_f5}
+
+ La suma de los ángulos interiores de un hexágono es de 720º
+
+ \begin{choices}
+    \choice Verdadero
+    \choice Falso
+\end{choices}
+ 
+\end{question}
+
+%%% --- pregunta vf6
+\begin{question}{v_f6}
+
+El semiperímetro de un triángulo equilátero con base \(b=5\) cm es \(s= 7.5 \) cm. 
+
+\begin{choices}
+    \choice Verdadero
+    \choice Falso
+\end{choices}
+ 
+\end{question}
+ 
+\parbox{6in}{\textsc{\textbf{Parte II.} Opción Múltiple.}}
+
+\hrule
+
+
+%%% --- pregunta mul1
+\begin{question}{mul1}
+
+¿Cuál de los siguientes números es irracional? 
+
+\begin{choices}
+        \choice  $\sqrt{4000} $
+        \choice  $-\sqrt{6}$ 
+        \choice  $\sqrt{2}$ 
+        \choice  $17$
+        \end{choices}
+
+\end{question}
+
+%%% --- pregunta mul2
+\begin{question}{mul2}
+
+Resuelve la ecuación: \( \left|  5-x  \right| =5\)
+
+    \begin{choices}
+            \choice $0, 10$
+            \choice $0, 5$
+            \choice $-5, 10$
+            \choice $-10, 0$
+    \end{choices}
+    
+\end{question}
+
+%%% --- pregunta mul3
+\begin{question}{mul3}
+
+    Resuelve la ecuación: \(\left| 5x+5 \right|= 7 \)
+    
+    \begin{choices}
+            \choice $-3, {\frac{13}{2}}$
+            \choice $-3, {-\frac{13}{2}}$
+            \choice $3, {\frac{13}{2}}$
+            \choice $3, {-\frac{13}{2}}$
+    \end{choices}
+    
+\end{question}
+
+%%% --- pregunta mul4
+\begin{question}{mul4}
+
+     Resuelve por factorización:  \(x^2 - 2 x - 8  =0. \  \ x = \)
+     
+        \begin{choices}
+            \choice \(-2, 4\)
+            \choice \( -2, 2\)
+            \choice \(-2, 0 \)
+            \choice \(2, -4\)
+        \end{choices}
+
+\end{question}
+
+%%% --- pregunta mul5
+\begin{question}{mul5}
+    
+Halla los valores de \(x\) si \   \((x+3)^2 = 100\)
+
+        \begin{choices}
+            \choice $7, -13$
+            \choice $-7,-13$
+            \choice $-7, 13$
+            \choice $\empty$
+        \end{choices}
+        
+\end{question}
+
+%%% --- pregunta mul6
+\begin{question}{mul6}
+
+        Halla \(x\) si \ \( x^2 - x = 6  \).
+        
+   \begin{choices}
+            \choice $-2, 3$
+            \choice $-3, 2$
+            \choice $2, 3$
+            \choice $6, -1$
+\end{choices}
+        
+\end{question}
+
+%%% --- pregunta mul7
+\begin{question}{mul7}
+
+        Completa el cuadrado para hallar las soluciones a $\ x(x+4) = 0 $
+        
+   \begin{choices}
+            \choice $0, 2$
+            \choice $-2, 2$
+            \choice $-2, 0$
+            \choice $4,0$
+   \end{choices}
+        
+        
+\end{question}
+
+%%% --- pregunta mul8
+\begin{question}{mul8}
+
+        Construye un polinomio de segundo grado a partir de las soluciones \(x=2, x=1\).
+
+\setlength{\multicolsep}{0.5em}
+        \begin{choices}
+            \choice $x^2 - 3x + 2$
+            \choice $x^2 + 3x + 2$
+            \choice $x^2 +2x + 2$
+            \choice $x^2 +2$
+        \end{choices}
+        
+\end{question}
+
+%%% --- pregunta mul9
+\begin{question}{mul9}
+        
+\setlength{\multicolsep}{0.5em}
+         Expresa en forma estándar \((x-h)^2 = k\) la ecuación   \ \ \(x^2 + 8x+7= 27\)
+         
+    \begin{choices}
+            \choice $(x-4)^2=16$
+            \choice $(x-4)^2=13$
+            \choice $(x+4)^2=-36$
+            \choice $(x+4)^2=36$
+   \end{choices}
+        
+\end{question}
+
+%%% --- pregunta mul10
+\begin{question}{mul10}
+
+            Factoriza:  \ \ \(x^2 -2x +1 \)
+        \begin{choices}
+            \choice $(x+2)(x -1)$
+            \choice $(x-1)(x-1)$
+            \choice $(x-2)(x-1)$
+            \choice $x(x+1)$
+        \end{choices}
+         
+\end{question}
+
+%%% --- pregunta mul11
+\begin{question}{mul11}
+
+        Expresa en forma estándar \((x-h)^2 = k\) la ecuación : \ \ \(x^2 + 6x +4 = 0\)
+        
+ \begin{choices}
+            \choice $(x+3)^2 = 5$
+            \choice $(x-3)^2 = -13$
+            \choice $(x+3)^2 = 13$
+            \choice $(x-3)^2 = -5$
+\end{choices}
+        
+\end{question}
+
+%%% --- pregunta mul12
+\begin{question}{mul12}
+         
+            Factoriza:  \ \ \(x^2+x -2 \)
+        \begin{choices}
+            \choice $(x+2)(x -1)$
+            \choice $(x-1)(x-1)$
+            \choice $(x-2)(x-1)$
+            \choice $(x+1)(x-2)$
+        \end{choices}
+        
+\end{question}
+
+%%% --- pregunta mul13
+\begin{question}{mul13}
+
+La suma resultante de dos números, \(a\) y \(b\), es \(16\). Si su producto es \(63\), encuentra\(a\) y \(b\):
+
+    \begin{choices}
+         \choice \(7, 3.5\)
+         \choice \(4,7\)
+         \choice \(7.5, 3\)
+         \choice \(9, 5\)
+    \end{choices}
+\vspace{0.2in}
+\end{question}
+
+%%% --- pregunta mul14
+\begin{question}{mul14}
+
+Calcula el volumen del siguiente prisma rectangular:
+
+        \begin{choices}
+            \choice $443 \ in^3$ 
+            \choice $832  \ in^3$
+            \choice $773  \ in^3$
+            \choice $339  \ in^3$
+        \end{choices}
+  
+\end{question}
+
+%%% --- pregunta mul15
+\begin{question}{mul15}
+
+ Halla el valor de cada ángulo interno de un pentágono equilatero.
+ 
+        \begin{choices}
+            \choice 108º
+            \choice 72º
+            \choice 110º
+            \choice 540º
+        \end{choices}
+
+\end{question}
+
+%%% --- pregunta mul16
+\begin{question}{mul16}
+
+ La suma de los ángulos internos de un paralelograma es:
+ 
+        \begin{choices}
+            \choice 180º
+            \choice 420º
+            \choice 360º
+            \choice 270º
+        \end{choices}
+
+\end{question}
+
+%%% --- pregunta mul17
+\begin{question}{mul17}
+
+¿Cuál de los siguintes ángulos es coterminal 375º?
+
+        \begin{choices}
+        \choice $225$º
+        \choice $325$º
+        \choice $25$º
+        \choice $15$º
+        \end{choices}
+    
+\end{question}
+
+%%% --- pregunta mul18
+\begin{question}{mul18}
+
+¿Cuál de los siguientes ángulos es coterminal a $325$º 
+
+\begin{choices}
+      \choice -45º
+      \choice -25º
+      \choice -35º
+      \choice 125º
+\end{choices}
+
+\end{question}
+
+%%% --- pregunta mul19
+\begin{question}{mul19}
+
+Se conoce el punto terminal ${(\frac{1}{2},\frac{\sqrt{3}}{2})}$ en el círculo unitario. ¿Cuál es el valor de $\theta$?
+
+\begin{choices}
+    \choice 30º
+    \choice 120º
+    \choice 45º 
+    \choice 60º
+\end{choices}
+
+\end{question}
+
+%%% --- pregunta mul20
+\begin{question}{mul20}
+
+¿En qué cuadrante se halla el lado terminal de un ángulo de $-320$º?
+
+\begin{choices}
+      \choice I
+      \choice II
+      \choice  III
+      \choice IV
+\end{choices}
+\end{question}
+
+%%% --- pregunta mul21
+\begin{question}{mul21}
+
+\uplevel{(27-29) Utiliza la siguiente figura para contestar las siguientes 3 preguntas}
+
+Determina el valor de  \(\sin{(\theta)}\)
+
+ \begin{choices}
+            \choice $4/5$
+            \choice $5/3$
+            \choice $3/5$
+            \choice $5/4$
+ \end{choices}
+\end{question}
+
+%%% --- pregunta mul22
+\begin{question}{mul22} 
+ 
+Determina el valor de  \(\tan{(\theta)}\)
+
+ \begin{choices}
+            \choice $4/5$
+            \choice $5/3$
+            \choice $3/4$
+            \choice $4/3$
+ \end{choices}
+\end{question}
+
+%%% --- pregunta mul23
+\begin{question}{mul23}
+  
+Determina el valor del ángulo, \(\theta\)=
+
+ \begin{choices}
+            \choice $22.6$
+            \choice $53.1$
+            \choice$36.7$
+            \choice $48.6$
+ \end{choices}
+\end{question}
+
+%%% --- pregunta mul24
+\begin{question}{mul24} 
+ 
+ Halla  $\theta$ si \(\sin{\theta}=\frac{1}{2}\) 
+ 
+ \begin{choices}
+            \choice $22.5$º
+            \choice $30 $º
+            \choice $45$º
+            \choice$60$º
+ \end{choices}
+\end{question}
+
+%%% --- pregunta mul25
+\begin{question}{mul25}
+    
+Expresa \(\sin{(\theta)} \) en términos de \(\cos{\theta}\). \(\sin{(\theta)} = \)
+
+\begin{choices}
+       \choice $\sqrt{\cos{\theta} - 1}$
+       \choice $\sqrt{1 - \cos{\theta}}$
+       \choice $1 - {\cos^2{\theta} }$
+       \choice $\cos^{2}{\theta} - 1$
+\end{choices}
+\end{question}
+
+%%% --- pregunta mul26
+\begin{question}{mul26}
+            
+Se sabe que la Torre de la Libertad tiene una altura de 305 pies. Si el ángulo de elevación que existe desde el barco hasta la parte más alta de la torre es de 20°, a qué distancia, en pies, se encuentran uno de otro?
+
+
+ \begin{choices}
+            \choice $837$ 
+            \choice $124$ 
+            \choice $982$
+            \choice $274$
+ \end{choices}
+\end{question}
+
+%%% --- pregunta mul27
+\begin{question}{mul27}
+            
+
+Expresa \(\dfrac{7\pi}{3}\) en grados
+
+\begin{choices}
+    \choice $0.333$ rad
+      \choice $0.743$ rad
+      \choice $2.222$ rad
+     \choice $0.013$ rad
+\end{choices}
+\end{question}
+
+%%% --- pregunta mul28
+\begin{question}{mul28}
+
+
+Un triángulo rectángulo tiene medidas para sus lados \(2\sqrt{3}\) y \(3\sqrt{5}\), halla la hipotenusa.
+
+\begin{choices}
+   \choice $10$ 
+    \choice $2\sqrt{30}$
+    \choice $8\sqrt{15}$
+   \choice $2\sqrt{23}$
+\end{choices}
+\end{question}
+
+%%% --- pregunta mul29
+\begin{question}{mul29}
+
+
+Calcula el área de un triángulo cuya anchura es de 30 cm y un perímetro de 140 cm.    
+
+\begin{choices}
+    \choice $1400 cm^2$
+    \choice $1500  cm^2$
+    \choice $90  cm^20$
+   \choice $1200  cm^2$
+\end{choices}
+
+\end{question}
+
+%%% --- pregunta mul30
+\begin{question}{mul30}
+
+Halla los valores de \(c\) dado que \( a = 14.6 cm, b = 20 cm \) a \( \angle C = 120\)°
+
+
+ \begin{choices}
+            \choice $30.9 cm$
+            \choice $37.09 cm$
+            \choice $34.09 cm$
+            \choice $28.09 cm$
+\end{choices}
+            
+\end{question}
+
+%%% --- pregunta mul31
+\begin{question}{mul31}
+
+Un triángulo rectángulo con una hipotenusa de 6 y un cateto con longitud de  $\sqrt{5}$, tiene un segundo cateto igual a
+
+  \begin{choices}
+      \choice $\sqrt{31}$
+      \choice $21$
+      \choice $\sqrt{41}$
+      \choice $31$
+\end{choices}
+
+\end{question}
+
+%%% --- pregunta mul32
+\begin{question}{mul32}
+
+Encuentra la longitud de un arco formado por un ángulo $\theta = 45$º si la distancia del punto terminar al centro (radio) es igual a $r=2 \ cm$
+
+\begin{choices}
+    \choice  $\pi $ cm
+    \choice $\dfrac{\pi}{3} $ cm
+    \choice $\dfrac{4\pi}{3} $ cm
+    \choice  $\dfrac{2\pi}{3}  $ cm
+\end{choices}
+
+\end{question}
+
+%%% --- pregunta mul33
+\begin{question}{mul33}
+
+Encuentra el área del sector circular que subtiende un ángulo de \(\dfrac{\pi}{5}\)rad si el radio es de 10 centimetros. 
+
+\begin{choices}
+    \choice $5\pi \ cm^2$
+    \choice $50\pi \  cm^2$
+    \choice $25\pi \ cm^2$
+    \choice $10\pi \ cm^2$
+\end{choices}
+
+\end{question}
+
+%%% --- pregunta mul34
+\begin{question}{mul34}
+
+¿Cuál de las siguientes es equivalente a \(\dfrac{\tan{x}}{\cos{x}}\)
+
+\begin{choices}
+    \choice $\sin{x}$
+    \choice $\csc{x}$
+    \choice $\sec{x}$
+    \choice $\cos{x}$
+\end{choices}
+
+\end{question}
+
+%%% --- pregunta mul35
+\begin{question}{mul35}
+
+\end{document}
+  

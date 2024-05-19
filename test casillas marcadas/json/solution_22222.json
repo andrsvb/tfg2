@@ -1,0 +1,904 @@
+{
+    "exam": "test_qr",
+    "variant": "22222",
+    "num_boxes": 67,
+    "exercises": [
+        {
+            "exercise": "vf1",
+            "checkboxes": [
+                {
+                    "checkbox": "0,0",
+                    "cords": [
+                        105.961,
+                        401.272,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 1,
+                    "is_marked": true
+                },
+                {
+                    "checkbox": "0,1",
+                    "cords": [
+                        105.961,
+                        385.332,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 1,
+                    "is_marked": false
+                }
+            ],
+            "sol_marked": [
+                "0,0"
+            ]
+        },
+        {
+            "exercise": "vf2",
+            "checkboxes": [
+                {
+                    "checkbox": "1,0",
+                    "cords": [
+                        105.961,
+                        341.717,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 1,
+                    "is_marked": true
+                },
+                {
+                    "checkbox": "1,1",
+                    "cords": [
+                        105.961,
+                        325.776,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 1,
+                    "is_marked": false
+                }
+            ],
+            "sol_marked": [
+                "1,0"
+            ]
+        },
+        {
+            "exercise": "vf3",
+            "checkboxes": [
+                {
+                    "checkbox": "2,0",
+                    "cords": [
+                        105.961,
+                        283.352,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 1,
+                    "is_marked": true
+                },
+                {
+                    "checkbox": "2,1",
+                    "cords": [
+                        105.961,
+                        267.412,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 1,
+                    "is_marked": false
+                }
+            ],
+            "sol_marked": [
+                "2,0"
+            ]
+        },
+        {
+            "exercise": "vf4",
+            "checkboxes": [
+                {
+                    "checkbox": "3,0",
+                    "cords": [
+                        105.961,
+                        224.988,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 1,
+                    "is_marked": true
+                },
+                {
+                    "checkbox": "3,1",
+                    "cords": [
+                        105.961,
+                        209.048,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 1,
+                    "is_marked": false
+                }
+            ],
+            "sol_marked": [
+                "3,0"
+            ]
+        },
+        {
+            "exercise": "vf5",
+            "checkboxes": [
+                {
+                    "checkbox": "4,0",
+                    "cords": [
+                        105.961,
+                        166.072,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 1,
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "4,1",
+                    "cords": [
+                        105.961,
+                        150.131,
+                        12.716,
+                        12.717
+                    ],
+                    "page": 1,
+                    "is_marked": true
+                }
+            ],
+            "sol_marked": [
+                "4,1"
+            ]
+        },
+        {
+            "exercise": "vf6",
+            "checkboxes": [
+                {
+                    "checkbox": "5,0",
+                    "cords": [
+                        105.961,
+                        107.707,
+                        12.716,
+                        12.717
+                    ],
+                    "page": 1,
+                    "is_marked": true
+                },
+                {
+                    "checkbox": "5,1",
+                    "cords": [
+                        105.961,
+                        91.767,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 1,
+                    "is_marked": false
+                }
+            ],
+            "sol_marked": [
+                "5,0"
+            ]
+        },
+        {
+            "exercise": "mul1",
+            "checkboxes": [
+                {
+                    "checkbox": "6,0",
+                    "cords": [
+                        105.961,
+                        730.734,
+                        12.716,
+                        12.717
+                    ],
+                    "page": 2,
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "6,1",
+                    "cords": [
+                        105.961,
+                        714.794,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 2,
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "6,2",
+                    "cords": [
+                        105.961,
+                        698.854,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 2,
+                    "is_marked": true
+                },
+                {
+                    "checkbox": "6,3",
+                    "cords": [
+                        105.961,
+                        682.914,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 2,
+                    "is_marked": false
+                }
+            ],
+            "sol_marked": [
+                "6,2"
+            ]
+        },
+        {
+            "exercise": "mul2",
+            "checkboxes": [
+                {
+                    "checkbox": "7,0",
+                    "cords": [
+                        105.961,
+                        639.936,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 2,
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "7,1",
+                    "cords": [
+                        105.961,
+                        623.996,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 2,
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "7,2",
+                    "cords": [
+                        105.961,
+                        608.056,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 2,
+                    "is_marked": true
+                },
+                {
+                    "checkbox": "7,3",
+                    "cords": [
+                        105.961,
+                        592.115,
+                        12.716,
+                        12.717
+                    ],
+                    "page": 2,
+                    "is_marked": false
+                }
+            ],
+            "sol_marked": [
+                "7,2"
+            ]
+        },
+        {
+            "exercise": "mul3",
+            "checkboxes": [
+                {
+                    "checkbox": "8,0",
+                    "cords": [
+                        105.961,
+                        548.916,
+                        12.716,
+                        12.717
+                    ],
+                    "page": 2,
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "8,1",
+                    "cords": [
+                        105.961,
+                        532.976,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 2,
+                    "is_marked": true
+                },
+                {
+                    "checkbox": "8,2",
+                    "cords": [
+                        105.961,
+                        517.036,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 2,
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "8,3",
+                    "cords": [
+                        105.961,
+                        501.096,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 2,
+                    "is_marked": false
+                }
+            ],
+            "sol_marked": [
+                "8,1"
+            ]
+        },
+        {
+            "exercise": "mul4",
+            "checkboxes": [
+                {
+                    "checkbox": "9,0",
+                    "cords": [
+                        105.961,
+                        457.259,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 2,
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "9,1",
+                    "cords": [
+                        105.961,
+                        441.319,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 2,
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "9,2",
+                    "cords": [
+                        105.961,
+                        425.379,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 2,
+                    "is_marked": true
+                },
+                {
+                    "checkbox": "9,3",
+                    "cords": [
+                        105.961,
+                        409.438,
+                        12.716,
+                        12.717
+                    ],
+                    "page": 2,
+                    "is_marked": false
+                }
+            ],
+            "sol_marked": [
+                "9,2"
+            ]
+        },
+        {
+            "exercise": "mul5",
+            "checkboxes": [
+                {
+                    "checkbox": "10,0",
+                    "cords": [
+                        105.961,
+                        365.602,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 2,
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "10,1",
+                    "cords": [
+                        105.961,
+                        349.661,
+                        12.716,
+                        12.717
+                    ],
+                    "page": 2,
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "10,2",
+                    "cords": [
+                        105.961,
+                        333.721,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 2,
+                    "is_marked": true
+                }
+            ],
+            "sol_marked": [
+                "10,2"
+            ]
+        },
+        {
+            "exercise": "mul6",
+            "checkboxes": [
+                {
+                    "checkbox": "11,0",
+                    "cords": [
+                        105.961,
+                        289.884,
+                        12.716,
+                        12.717
+                    ],
+                    "page": 2,
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "11,1",
+                    "cords": [
+                        105.961,
+                        273.944,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 2,
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "11,2",
+                    "cords": [
+                        105.961,
+                        258.004,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 2,
+                    "is_marked": true
+                },
+                {
+                    "checkbox": "11,3",
+                    "cords": [
+                        105.961,
+                        242.064,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 2,
+                    "is_marked": false
+                }
+            ],
+            "sol_marked": [
+                "11,2"
+            ]
+        },
+        {
+            "exercise": "mul7",
+            "checkboxes": [
+                {
+                    "checkbox": "12,0",
+                    "cords": [
+                        105.961,
+                        198.865,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 2,
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "12,1",
+                    "cords": [
+                        105.961,
+                        182.925,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 2,
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "12,2",
+                    "cords": [
+                        105.961,
+                        166.984,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 2,
+                    "is_marked": true
+                },
+                {
+                    "checkbox": "12,3",
+                    "cords": [
+                        105.961,
+                        151.044,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 2,
+                    "is_marked": false
+                }
+            ],
+            "sol_marked": [
+                "12,2"
+            ]
+        },
+        {
+            "exercise": "mul8",
+            "checkboxes": [
+                {
+                    "checkbox": "13,0",
+                    "cords": [
+                        105.961,
+                        108.398,
+                        12.716,
+                        12.717
+                    ],
+                    "page": 2,
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "13,1",
+                    "cords": [
+                        105.961,
+                        92.458,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 2,
+                    "is_marked": true
+                },
+                {
+                    "checkbox": "13,2",
+                    "cords": [
+                        105.961,
+                        76.518,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 2,
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "13,3",
+                    "cords": [
+                        105.961,
+                        60.578,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 2,
+                    "is_marked": false
+                }
+            ],
+            "sol_marked": [
+                "13,1"
+            ]
+        },
+        {
+            "exercise": "mul9",
+            "checkboxes": [
+                {
+                    "checkbox": "14,0",
+                    "cords": [
+                        105.961,
+                        729.543,
+                        12.716,
+                        12.717
+                    ],
+                    "page": 3,
+                    "is_marked": true
+                },
+                {
+                    "checkbox": "14,1",
+                    "cords": [
+                        105.961,
+                        713.603,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 3,
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "14,2",
+                    "cords": [
+                        105.961,
+                        697.663,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 3,
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "14,3",
+                    "cords": [
+                        105.961,
+                        681.723,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 3,
+                    "is_marked": false
+                }
+            ],
+            "sol_marked": [
+                "14,0"
+            ]
+        },
+        {
+            "exercise": "mul10",
+            "checkboxes": [
+                {
+                    "checkbox": "15,0",
+                    "cords": [
+                        105.961,
+                        637.332,
+                        12.716,
+                        12.717
+                    ],
+                    "page": 3,
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "15,1",
+                    "cords": [
+                        105.961,
+                        621.392,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 3,
+                    "is_marked": true
+                },
+                {
+                    "checkbox": "15,2",
+                    "cords": [
+                        105.961,
+                        605.452,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 3,
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "15,3",
+                    "cords": [
+                        105.961,
+                        589.512,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 3,
+                    "is_marked": false
+                }
+            ],
+            "sol_marked": [
+                "15,1"
+            ]
+        },
+        {
+            "exercise": "mul11",
+            "checkboxes": [
+                {
+                    "checkbox": "16,0",
+                    "cords": [
+                        105.961,
+                        545.122,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 3,
+                    "is_marked": true
+                },
+                {
+                    "checkbox": "16,1",
+                    "cords": [
+                        105.961,
+                        529.181,
+                        12.716,
+                        12.717
+                    ],
+                    "page": 3,
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "16,2",
+                    "cords": [
+                        105.961,
+                        513.241,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 3,
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "16,3",
+                    "cords": [
+                        105.961,
+                        497.301,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 3,
+                    "is_marked": false
+                }
+            ],
+            "sol_marked": [
+                "16,0"
+            ]
+        },
+        {
+            "exercise": "mul12",
+            "checkboxes": [
+                {
+                    "checkbox": "17,0",
+                    "cords": [
+                        105.961,
+                        452.911,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 3,
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "17,1",
+                    "cords": [
+                        105.961,
+                        436.971,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 3,
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "17,2",
+                    "cords": [
+                        105.961,
+                        421.03,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 3,
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "17,3",
+                    "cords": [
+                        105.961,
+                        405.09,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 3,
+                    "is_marked": true
+                }
+            ],
+            "sol_marked": [
+                "17,3"
+            ]
+        },
+        {
+            "exercise": "mul13",
+            "checkboxes": [
+                {
+                    "checkbox": "18,0",
+                    "cords": [
+                        105.961,
+                        349.936,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 3,
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "18,1",
+                    "cords": [
+                        105.961,
+                        333.996,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 3,
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "18,2",
+                    "cords": [
+                        105.961,
+                        318.055,
+                        12.716,
+                        12.717
+                    ],
+                    "page": 3,
+                    "is_marked": true
+                },
+                {
+                    "checkbox": "18,3",
+                    "cords": [
+                        105.961,
+                        302.115,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 3,
+                    "is_marked": false
+                }
+            ],
+            "sol_marked": [
+                "18,2"
+            ]
+        },
+        {
+            "exercise": "mul14",
+            "checkboxes": [
+                {
+                    "checkbox": "19,0",
+                    "cords": [
+                        105.961,
+                        259.47,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 3,
+                    "is_marked": true
+                },
+                {
+                    "checkbox": "19,1",
+                    "cords": [
+                        105.961,
+                        243.529,
+                        12.716,
+                        12.717
+                    ],
+                    "page": 3,
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "19,2",
+                    "cords": [
+                        105.961,
+                        227.589,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 3,
+                    "is_marked": false
+                },
+                {
+                    "checkbox": "19,3",
+                    "cords": [
+                        105.961,
+                        211.649,
+                        12.716,
+                        12.716
+                    ],
+                    "page": 3,
+                    "is_marked": false
+                }
+            ],
+            "sol_marked": [
+                "19,0"
+            ]
+        }
+    ]
+}
