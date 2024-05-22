@@ -1,0 +1,27 @@
+{
+    "examen": [
+        {
+            "ejercicio": "basic-adittion",
+            "num_boxes": 20,
+            "marked_sol": [
+                2,
+                12
+            ],
+            "marked_scan": [
+                2,
+                12
+            ]
+        },
+        {
+            "ejercicio": "derivativesin",
+            "num_boxes": 4,
+            "marked_sol": [
+                4
+            ],
+            "marked_scan": [
+                1,
+                2
+            ]
+        }
+    ]
+}

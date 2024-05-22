@@ -1,0 +1,28 @@
+{
+    "checkboxes": [
+        {
+            "exercise": "basic-adittion",
+            "state": "Off",
+            "coords": [
+                89.867,
+                581.13
+            ]
+        },
+        {
+            "exercise": "basic-adittion",
+            "state": "Yes",
+            "coords": [
+                111.549,
+                581.13
+            ]
+        },
+        {
+            "exercise": "basic-adittion",
+            "state": "Off",
+            "coords": [
+                133.232,
+                581.13
+            ]
+        }
+    ]
+}

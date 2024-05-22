@@ -1,0 +1,115 @@
+\documentclass[a4paper]{article}
+
+
+%#########################################################################
+\usepackage[utf8]{inputenc}
+%\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{color}
+\usepackage[python3]{texsurgery}
+
+% Example of user macro
+\providecommand{\abs}[1]{\lvert#1\rvert}
+
+\newcommand{\R}{\mathbb{R}}
+\def \Rb{\mathbb{R}}
+%#########################################################################
+% Header
+%#########################################################################
+
+% Add test for graphic path [it works but fails if the compilation is performed from another folder]
+% it could be fixer using TEXINPUTS
+%\graphicspath{{Figures/other/}}
+
+\title{Test de conversion AMC vers moodle}
+\author{amc2moodle team}
+
+
+
+%#########################################################################
+% Document
+%#########################################################################
+\begin{document}
+
+% Define test level scoring
+% e=incohérence; b=bonne; m=mauvaise; p planché (on ne descent pas en dessous)
+\baremeDefautS{e=-0.5,b=1,m=-0.5}% never put b<1,
+\baremeDefautM{e=-0.5,b=1,m=-0.25,p=-0.5}% never put b<1, with amc2moodle m correspond to the grade if all the wrong answers are ticked, b correspond to the grade if all the good answers are ticked
+
+\begin{runsilent}
+from random import seed, randint
+from sympy import sin, symbols, diff
+from sympy.printing import latex
+x = symbols('x')
+seed(\seed)
+\end{runsilent}
+
+% Include tex file containing the questions
+\element{cat1}{
+\begin{questionmultx}{basic-adittion}
+\begin{runsilent}
+a = \index + 2
+\end{runsilent}
+What is $8+\eval{a}$?
+% \includegraphics{chickenpatience.jpg}
+
+\AMCnumericChoices{\eval{8+a}}{digits=2,sign=false,scoreexact=3}
+\end{questionmultx}
+}
+\element{cat2}{
+\begin{question}{derivativesin}     \scoring{e=-0.5,b=1,m=-.25,p=-0.5}
+\begin{runsilent}
+a = randint(2,10)
+f = sin(a*x)
+fd = diff(f,x)
+\end{runsilent}
+  What is the first derivative of $f=\eval{f}$?
+  \begin{choices}
+    \correctchoice{$\eval{fd}$}
+    \wrongchoice{$\eval{fd*a}$}
+    \wrongchoice{$\eval{fd/a}$}
+    \wrongchoice{$\eval{fd + a}$}
+  \end{choices}
+  \explain{Use the chain rule: $f(x)=g(h(x))$, where $h(x)=\eval{a*x}$ and $g(y)=\sin(y)$.}
+\end{question}
+}
+
+% #################################################################
+% C R E A T I O N  D E S  C O P I E S
+% #################################################################
+\exemplaire{1}{    	% nombre de sujet différent
+  %debut de l'en-tête des copies :
+  \vspace*{.5cm}
+  \begin{minipage}{.4\linewidth}
+    \centering\large\bf Test
+  \end{minipage}
+  \champnom{\fbox{
+      \begin{minipage}{.5\linewidth}
+        Nom et prénom :
+
+        \vspace*{.5cm}\dotfill
+        \vspace*{1mm}
+      \end{minipage}
+    }}
+
+  \begin{flushleft}
+Illustration of \texttt{amc2moodle} capabilities. All these questions can be converted \emph{automatically} to \texttt{moodle} with the same layout.
+    \begin{center}
+      \Large{\textsc{Multiple choice tests using AMC Latex Format}}\\
+      \normalsize
+    \end{center}
+  \end{flushleft}
+
+
+  % mélange et catégorie (groupe dans AMC)
+  \cleargroup{BigGroupe}
+  \copygroup{cat1}{BigGroupe}
+  \copygroup{cat2}{BigGroupe}
+  % not usefull for testing !
+  %\melangegroupe{BigGroupe}
+  \restituegroupe{BigGroupe}
+}
+
+
+\end{document}

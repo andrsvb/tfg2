@@ -1,0 +1,196 @@
+{
+    "checkboxes": [
+        {
+            "checkbox": "basic-adittion 1,1",
+            "state": "/Off",
+            "cords": [
+                89.867,
+                581.13
+            ]
+        },
+        {
+            "checkbox": "basic-adittion 1,2",
+            "state": "/Yes",
+            "cords": [
+                111.549,
+                581.13
+            ]
+        },
+        {
+            "checkbox": "basic-adittion 1,3",
+            "state": "/Off",
+            "cords": [
+                133.232,
+                581.13
+            ]
+        },
+        {
+            "checkbox": "basic-adittion 1,4",
+            "state": "/Off",
+            "cords": [
+                154.914,
+                581.13
+            ]
+        },
+        {
+            "checkbox": "basic-adittion 1,5",
+            "state": "/Off",
+            "cords": [
+                176.597,
+                581.13
+            ]
+        },
+        {
+            "checkbox": "basic-adittion 1,6",
+            "state": "/Off",
+            "cords": [
+                198.28,
+                581.13
+            ]
+        },
+        {
+            "checkbox": "basic-adittion 1,7",
+            "state": "/Off",
+            "cords": [
+                219.962,
+                581.13
+            ]
+        },
+        {
+            "checkbox": "basic-adittion 1,8",
+            "state": "/Off",
+            "cords": [
+                241.645,
+                581.13
+            ]
+        },
+        {
+            "checkbox": "basic-adittion 1,9",
+            "state": "/Off",
+            "cords": [
+                263.327,
+                581.13
+            ]
+        },
+        {
+            "checkbox": "basic-adittion 1,10",
+            "state": "/Off",
+            "cords": [
+                285.01,
+                581.13
+            ]
+        },
+        {
+            "checkbox": "basic-adittion 1,11",
+            "state": "/Off",
+            "cords": [
+                89.867,
+                564.885
+            ]
+        },
+        {
+            "checkbox": "basic-adittion 1,12",
+            "state": "/Off",
+            "cords": [
+                111.549,
+                564.885
+            ]
+        },
+        {
+            "checkbox": "basic-adittion 1,13",
+            "state": "/Off",
+            "cords": [
+                133.232,
+                564.885
+            ]
+        },
+        {
+            "checkbox": "basic-adittion 1,14",
+            "state": "/Off",
+            "cords": [
+                154.914,
+                564.885
+            ]
+        },
+        {
+            "checkbox": "basic-adittion 1,15",
+            "state": "/Yes",
+            "cords": [
+                176.597,
+                564.885
+            ]
+        },
+        {
+            "checkbox": "basic-adittion 1,16",
+            "state": "/Off",
+            "cords": [
+                198.28,
+                564.885
+            ]
+        },
+        {
+            "checkbox": "basic-adittion 1,17",
+            "state": "/Off",
+            "cords": [
+                219.962,
+                564.885
+            ]
+        },
+        {
+            "checkbox": "basic-adittion 1,18",
+            "state": "/Off",
+            "cords": [
+                241.645,
+                564.885
+            ]
+        },
+        {
+            "checkbox": "basic-adittion 1,19",
+            "state": "/Off",
+            "cords": [
+                263.327,
+                564.885
+            ]
+        },
+        {
+            "checkbox": "basic-adittion 1,20",
+            "state": "/Off",
+            "cords": [
+                285.01,
+                564.885
+            ]
+        },
+        {
+            "checkbox": "derivativesin 2,4",
+            "state": "/Off",
+            "cords": [
+                93.245,
+                498.248
+            ]
+        },
+        {
+            "checkbox": "derivativesin 2,2",
+            "state": "/Off",
+            "cords": [
+                93.245,
+                482.308
+            ]
+        },
+        {
+            "checkbox": "derivativesin 2,3",
+            "state": "/Off",
+            "cords": [
+                93.245,
+                466.368
+            ]
+        },
+        {
+            "checkbox": "derivativesin 2,1",
+            "state": "/Yes",
+            "cords": [
+                93.245,
+                450.428
+            ]
+        }
+    ]
+}
