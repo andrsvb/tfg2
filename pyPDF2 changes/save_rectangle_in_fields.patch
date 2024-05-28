@@ -1,0 +1,28 @@
+diff --git a/PyPDF2/constants.py b/PyPDF2/constants.py
+index f8d3faf..827bdc9 100644
+--- a/PyPDF2/constants.py
++++ b/PyPDF2/constants.py
+@@ -302,6 +302,7 @@ class FieldDictionaryAttributes:
+     V = "/V"  # text string, optional
+     DV = "/DV"  # text string, optional
+     AA = "/AA"  # dictionary, optional
++    Rect = "/Rect"  # bounding rectangle, optional
+ 
+     @classmethod
+     def attributes(cls) -> Tuple[str, ...]:
+@@ -316,6 +317,7 @@ class FieldDictionaryAttributes:
+             cls.DV,
+             cls.Kids,
+             cls.AA,
++            cls.Rect,
+         )
+ 
+     @classmethod
+@@ -329,6 +331,7 @@ class FieldDictionaryAttributes:
+             cls.Ff: "Field Flags",
+             cls.V: "Value",
+             cls.DV: "Default Value",
++            cls.Rect: "Bounding rectangle",
+         }
+ 
+ 
