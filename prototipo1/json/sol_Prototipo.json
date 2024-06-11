@@ -1,5 +1,5 @@
 {
-    "exam": "TestGlobal",
+    "exam": "Prototipo",
     "num_boxes": 24,
     "exercises": [
         {
@@ -188,7 +188,7 @@
             ],
             "sol_marked": [
                 "0,1",
-                "0,12"
+                "0,13"
             ]
         },
         {
@@ -236,5 +236,5 @@
             ]
         }
     ],
-    "variant": "271828"
+    "variant": "11111"
 }

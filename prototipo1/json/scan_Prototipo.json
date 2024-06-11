@@ -1,5 +1,5 @@
 {
-    "exam": "Test",
+    "exam": "Prototipo",
     "num_boxes": 24,
     "exercises": [
         {
@@ -186,7 +186,7 @@
                     ]
                 }
             ],
-            "scan_marked": [
+            "student_marked": [
                 "0,0",
                 "0,13"
             ]
@@ -231,10 +231,10 @@
                     ]
                 }
             ],
-            "scan_marked": [
+            "student_marked": [
                 "1,3"
             ]
         }
     ],
-    "student": "2"
+    "student": "11111"
 }

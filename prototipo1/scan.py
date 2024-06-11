@@ -80,12 +80,11 @@ def detect_sol(sol_file, st_json, id_variant):
             data['exercises'][count_ex]['sol_marked'] = []
         # check if the current box is marked. appends if marked
         count_box = count_box + 1
-        data['exercises'][count_ex][count_box]['is_marked'] = var[box]['/V'] == '/Yes'
         if var[box]['/V'] == '/Yes':
             data['exercises'][count_ex]['sol_marked'].append(str(count_ex) + ',' + str(count_box))
 
     # write the JSON file
-    jf_name = 'json/sol_' + id_variant+ '.json'
+    jf_name = 'json/sol_' + data['exam'] + '.json'
     os.makedirs(os.path.dirname(jf_name), exist_ok=True)
     with open(jf_name, 'w') as outfile:
         json.dump(data, outfile, indent=4)
@@ -118,12 +117,11 @@ def detect_fill(filled_file, st_json, id_variant):
             data['exercises'][count_ex]['student_marked'] = []
         # check if the current box is marked. appends if marked
         count_box = count_box + 1
-        data['exercises'][count_ex][count_box]['is_marked'] = var[box]['/V'] == '/Yes'
         if var[box]['/V'] == '/Yes':
             data['exercises'][count_ex]['student_marked'].append(str(count_ex) + ',' + str(count_box))
 
     # write the JSON file
-    jf_name = 'json/sol_' + id_variant+ '.json'
+    jf_name = 'json/fill_' + data['exam'] + '.json'
     os.makedirs(os.path.dirname(jf_name), exist_ok=True)
     with open(jf_name, 'w') as outfile:
         json.dump(data, outfile, indent=4)
@@ -239,14 +237,14 @@ def analyse(scan_file, st_json, id_student):
             if not is_same_exercise(exercise['checkboxes'], scan_boxes[0][count_boxes1:count_boxes2]):
                 print("Error, estructura de casillas no encaja")
             # check each box in the exercise for if they're marked
-            data['exercises'][i]['scan_marked'] = []
+            data['exercises'][i]['student_marked'] = []
             for j in range(count_boxes1, count_boxes2):
                 if is_marked(scan_boxes[0][j]):
-                    data['exercises'][i]['scan_marked'].append(str(i) + ',' + str(j-count_boxes1))
+                    data['exercises'][i]['student_marked'].append(str(i) + ',' + str(j-count_boxes1))
             count_boxes1 = count_boxes2
 
     # write the JSON file
-    jf_name = 'json/scan_' + id_student+ '.json'
+    jf_name = 'json/scan_' + data['exam'] + '.json'
     os.makedirs(os.path.dirname(jf_name), exist_ok=True)
     with open(jf_name, 'w') as outfile:
         json.dump(data, outfile, indent=4)
@@ -268,7 +266,7 @@ def match(sol_json, scan_json):
         print('Error, solution y scanned no coinciden')
     count = 0
     for i, exercise in enumerate(data_sol['exercises']):
-        if exercise['sol_marked'] == data_scan['exercises'][i]['scan_marked']:
+        if exercise['sol_marked'] == data_scan['exercises'][i]['student_marked']:
             count = count + 1
 
     # print('Grade: ', 10*count/data_scan['exercises'].__len__())
