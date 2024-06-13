@@ -5,6 +5,7 @@ import os
 from pdf2image import convert_from_path
 import numpy as np
 import cv2
+import matplotlib.pyplot as plt
 
 
 
@@ -131,7 +132,7 @@ def detect_fill(filled_file, st_json, id_variant):
 
 
 
-def find_cboxes_img(png_file):
+def find_cboxes_img(png_file, draw=False):
     img = cv2.imread(png_file)
     gray_scale = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     th1, img_bin = cv2.threshold(gray_scale, 150, 225, cv2.THRESH_BINARY)
@@ -151,13 +152,15 @@ def find_cboxes_img(png_file):
     _, labels, stats, _ = cv2.connectedComponentsWithStats(~img_bin_final, connectivity=8, ltype=cv2.CV_32S)
     # stats: (x, y, w, h, a) * num_boxes
     # first two rows of stats are the background and residue pixel bounding boxes, which we dont need
+    if draw:
+        draw_boxes(img, stats[2:])
     return stats[2:]
 
 
 
 
 
-def find_cboxes(pdf_file, id_student):
+def find_cboxes(pdf_file, id_student, draw=False):
     boxes = []
     # export the pdf's pages to png with 250 dots per inch (dpi)
     pages = convert_from_path(pdf_file, 250)
@@ -171,7 +174,8 @@ def find_cboxes(pdf_file, id_student):
         page.save(im_file)
 
         # add the checkboxes to the list
-        boxes.append(find_cboxes_img(im_file))
+        boxes.append(find_cboxes_img(im_file, draw))
+        os.remove(im_file)
     return boxes
 
 
@@ -214,9 +218,9 @@ def is_same_exercise(st_checkboxes, scan_checkboxes):       # assumes st_checkbo
 
 
 
-def analyse(scan_file, st_json, id_student):
+def analyse(scan_file, st_json, id_student, draw=False):
     # get the checkbox data
-    scan_boxes = find_cboxes(scan_file, id_student)
+    scan_boxes = find_cboxes(scan_file, id_student, draw)
     # open and read the statement JSON
     with open(st_json) as json_file:
         data = json.load(json_file)
@@ -275,4 +279,23 @@ def match(sol_json, scan_json):
 
 
 
+def draw_boxes(img, stats):
+    for x,y,w,h,area in stats:
+        cv2.rectangle(img,(x,y),(x+w,y+h),(0,255,0),2)
 
+    plt.figure(figsize=(20,20))
+    plt.imshow(img)
+
+    inner_boxes = []
+    areas = []
+    for x,y,w,h,a in stats[2:]:
+        x2,y2 = x+w,y+h
+        inner_boxes.append(img[y:y2].transpose()[x:x2])
+
+"""     fig = plt.figure(figsize=(12, 12))
+    columns = 4
+    rows = inner_boxes.__len__() // 4 + inner_boxes.__len__() % 4
+    for i, box in enumerate(inner_boxes):
+        fig.add_subplot(rows, columns, i+1)
+        plt.imshow(box)
+    plt.show() """
