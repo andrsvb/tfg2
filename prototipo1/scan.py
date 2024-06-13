@@ -137,6 +137,9 @@ def find_cboxes_img(png_file, draw=False):
     gray_scale = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     th1, img_bin = cv2.threshold(gray_scale, 150, 225, cv2.THRESH_BINARY)
     img_bin = ~img_bin
+    if draw:
+        plt.figure(figsize=(12,12))
+        plt.imshow(img_bin)
 
     # set min width of lines for the rectangle: 20 pixels
     line_min_width = 20
@@ -147,6 +150,9 @@ def find_cboxes_img(png_file, draw=False):
     img_bin_h = cv2.morphologyEx(img_bin, cv2.MORPH_OPEN, kernel_h)
     img_bin_v = cv2.morphologyEx(img_bin, cv2.MORPH_OPEN, kernel_v)
     img_bin_final = img_bin_h | img_bin_v
+    if draw:
+        plt.figure(figsize=(12,12))
+        plt.imshow(img_bin_final)
 
     # find conected lines that form a box
     _, labels, stats, _ = cv2.connectedComponentsWithStats(~img_bin_final, connectivity=8, ltype=cv2.CV_32S)
