@@ -6,6 +6,7 @@ import numpy as np
 import cv2
 from functools import reduce
 import sys
+import matplotlib.pyplot as plt
 
 
 
