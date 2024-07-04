@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage{qrcode}
+\usepackage[printwatermark]{xwatermark}
+
+\usepackage{qrcode}
+\usepackage[scale=0.8, angle=0, color=black,
+            pos={0.85\paperwidth, 0.95\paperheight},
+            anchor=rb]{draftwatermark}
+\SetWatermarkText{\qrcode[height=0.08\paperwidth]{test,1,\thepage}}
+
+\newwatermark[allpages=true,color=black!25,scale=1,xpos=0,ypos=0]{qr code: \qrcode{examen,variante,\thepage}}
+       
+\begin{document}
+
+default:\quad
+\qrcode{examen,variante,pagina}
+\qquad
+1 inch high (and wide):
+\quad
+\qrcode[height=1in]{examen,variante,pagina}
+
+\newpage
+
+default:\quad
+\qrcode{examen,variante,pagina}
+\qquad
+1 inch high (and wide):
+\quad
+\qrcode[height=1in]{examen,variante,pagina}
+
+\newpage
+
+default:\quad
+\qrcode{examen,variante,pagina}
+\qquad
+1 inch high (and wide):
+\quad
+\qrcode[height=1in]{examen,variante,pagina}
+
+\end{document}
