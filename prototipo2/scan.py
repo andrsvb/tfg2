@@ -9,6 +9,129 @@ import sys
 import matplotlib.pyplot as plt
 
 
+def detect(type, pdf_path, basename, id):
+    out_file = 'json/%s_%s.json' % (type, id)
+    boxes = pypdf.PdfFileReader(pdf_path).getFields()
+    data = {}
+    if type == 'question':
+        data = detect_st(boxes, basename, id)
+    elif type == 'solution':
+        data = detect_sol(boxes, basename, id)
+    os.makedirs(os.path.dirname(out_file), exist_ok=True)
+    with open(out_file, 'w') as outfile:
+        json.dump(data, outfile, indent=4)
+
+
+def detect_st(boxes, exam, variant):
+    data = {'exam': exam,
+            'variant': variant,
+            'num_boxes': boxes.__len__(),
+            'exercises': []}
+    count_ex = -1
+    count_box = -1
+    count_page = 1
+    last_y = sys.float_info.max
+    for box in boxes:
+        exercise = box.split(sep=':')[2]
+        if not data['exercises'] or (data['exercises'][count_ex]['exercise'] != exercise):
+            count_ex = count_ex + 1
+            count_box = -1
+            data['exercises'].append(
+                {
+                    'exercise': exercise,
+                    'checkboxes': []
+                }
+            )
+        count_box = count_box + 1
+        x1, y1, x2, y2 = [float(i) for i in boxes[box]['/Rect']]
+        if y1 > last_y:
+            count_page = count_page + 1
+        last_y = y1
+        data['exercises'][count_ex]['checkboxes'].append(
+            {
+                'checkbox': str(count_ex) + ',' + str(count_box),
+                'cords': [x2, y1, round(x2 - x1, 3), round(y2 - y1, 3)],
+                'page': count_page
+            })
+    return data
+
+
+def detect_sol(boxes, exam, variant):
+    data = {'exam': exam,
+            'variant': variant,
+            'num_boxes': boxes.__len__(),
+            'exercises': []}
+    count_ex = -1
+    count_box = -1
+    count_page = 1
+    last_y = sys.float_info.max
+    for box in boxes:
+        exercise = box.split(sep=':')[2]
+        if not data['exercises'] or (data['exercises'][count_ex]['exercise'] != exercise):
+            count_ex = count_ex + 1
+            count_box = -1
+            data['exercises'].append(
+                {
+                    'exercise': exercise,
+                    'checkboxes': []
+                }
+            )
+            data['exercises'][count_ex]['sol_marked'] = []
+        count_box = count_box + 1
+        x1, y1, x2, y2 = [float(i) for i in boxes[box]['/Rect']]
+        if y1 > last_y:
+            count_page = count_page + 1
+        last_y = y1
+        marked = boxes[box]['/V'] == '/Yes'
+        data['exercises'][count_ex]['checkboxes'].append(
+            {
+                'checkbox': str(count_ex) + ',' + str(count_box),
+                'cords': [x2, y1, round(x2 - x1, 3), round(y2 - y1, 3)],
+                'page': count_page,
+                'is_marked': marked
+            })
+        if marked:
+            data['exercises'][count_ex]['sol_marked'].append(str(count_ex) + ',' + str(count_box))
+    return data
+
+
+def detect_filled(boxes, exam, variant):
+    data = {'exam': exam,
+            'variant': variant,
+            'num_boxes': boxes.__len__(),
+            'exercises': []}
+    count_ex = -1
+    count_box = -1
+    count_page = 1
+    last_y = sys.float_info.max
+    for box in boxes:
+        exercise = box.split(sep=':')[2]
+        if not data['exercises'] or (data['exercises'][count_ex]['exercise'] != exercise):
+            count_ex = count_ex + 1
+            count_box = -1
+            data['exercises'].append(
+                {
+                    'exercise': exercise,
+                    'checkboxes': []
+                }
+            )
+            data['exercises'][count_ex]['student_marked'] = []
+        x1, y1, x2, y2 = [float(i) for i in boxes[box]['/Rect']]
+        if y1 > last_y:
+            count_page = count_page + 1
+        last_y = y1
+        count_box = count_box + 1
+        data['exercises'][count_ex]['checkboxes'].append(
+            {
+                'checkbox': str(count_ex) + ',' + str(count_box),
+                'cords': [x2, y1, round(x2 - x1, 3), round(y2 - y1, 3)],
+                'page': count_page
+            })
+        if boxes[box]['/V'] == '/Yes':
+            data['exercises'][count_ex]['student_marked'].append(str(count_ex) + ',' + str(count_box))
+    return data
+
+
 
 def detect_filled(boxes, exam, variant):
     data = {'exam': exam,
@@ -90,7 +213,7 @@ def find_qrs(file, dpi):
 
 
 
-def analyse(file, sol_json="", dpi=300):
+def analyse(file, sol_json="", dpi=300, debug=False):
     # TODO: check if all qrs are from the same exam and variant
     # TODO: deal with the JSON file parameter
     # check if pyPDF2 can detect the boxes
@@ -98,32 +221,50 @@ def analyse(file, sol_json="", dpi=300):
     # find qrs in the pdf
     qr_codes = find_qrs(file, dpi)
     exam, variant = qr_codes[0]['exam'], qr_codes[0]['variant']
+    # read json files
+    st_json = "json/question_%s.json" % variant
+    st_data = {}
+    if os.path.exists(st_json):
+        with open(st_json) as json_file:
+            st_data = json.load(json_file)
+    else:
+        e = 'Statement json file %s not found' % st_json
+        print(e)
+        sys.exit(1)
     if boxes:
         # extract marked boxes with pyPDF2
-        data = detect_filled(boxes, exam, variant)
+        if debug:
+            print("Extrayendo casillas con pyPDF")
+        exam_data = detect_filled(boxes, exam, variant)
     else:
         # extract marked boxes with OpenCV
-        data = analyse_scanned(file, dpi, qr_codes)
-    # TODO: open JSON file
-    # TODO: compare with the data extracted from the pdf
+        if debug:
+            print("Extrayendo casillas con OpenCV")
+        scan_data = analyse_scanned(file, dpi, qr_codes, debug)
+        _, exam_data = format_scan(st_data, scan_data)
+    # write extracted data into json file
+    out_file = 'json/scan_%s.json' % variant
+    with open(out_file, 'w') as outfile:
+        json.dump(exam_data, outfile, indent=4)
     # TODO: grade the exam and export the grade
-    return data
+    return exam_data
 
 
 
 
 
 
-def analyse_scanned(file, dpi, qr_codes):
+def analyse_scanned(file, dpi, qr_codes, debug=False):
     img_file = 'img_temp.png'
     data = {'exam': qr_codes[0]['exam'], 'variant': qr_codes[0]['variant'], 'num_boxes': 0, 'boxes': []}
     pages_data = []
     pages = convert_from_path(file, dpi)
     for i, page in enumerate(pages):
+        if debug:
+            print("Analizando la página %s" % qr_codes[i]['page'])
         page.save(img_file)
-        pages_data.append(analyse_page(img_file, dpi, qr_codes[i]['page'], qr_codes[i]['coordinates']))
+        pages_data.append(analyse_page(img_file, dpi, qr_codes[i]['page'], qr_codes[i]['coordinates'], debug))
     pages_data.sort(key=lambda k: k['page'])
-    # TODO: add 'num_boxes' value to dict
     count = 0
     for page in pages_data:
         count = count + page['boxes'].__len__()
@@ -186,15 +327,14 @@ def analyse_page(file, dpi, page, qr_coordinates, debug=False):
     contours, hierarchy = cv2.findContours(~img_bin_final, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
     contours = contours[::-1]   # [::-1] because the order is reversed
     stats = []
+    if debug:
+        print("Total de contornos encontrados: %s" % contours.__len__())
     for contour in contours:
         x, y, w, h = cv2.boundingRect(contour)
         if is_valid_box(x,y,w,h,qr_points,line_min_width,a_height,stats):
             stats.append([x, y, w, h])
     if debug:
-        for x,y,w,h in stats:
-            cv2.rectangle(img,(x,y),(x+w,y+h),(0,255,0),1)
-        plt.figure(figsize=(20,20))
-        plt.imshow(img)
+        print("Total de casillas encontradas: %s" % stats.__len__())
     # check if the boxes are marked and store the data
     for x, y, w, h in stats:
         # get the inside of the box from the inverted grayscale image and check if it is marked
@@ -203,6 +343,14 @@ def analyse_page(file, dpi, page, qr_coordinates, debug=False):
         inner_box = img_bin[y:y2, x:x2]
         box['is_marked'] = is_marked(inner_box, w, h)
         data['boxes'].append(box)
+        if debug:
+            if box['is_marked']:
+                cv2.rectangle(img,(x,y),(x+w,y+h),(0,255,0),2)
+            else:
+                cv2.rectangle(img,(x,y),(x+w,y+h),(255,255,0),2)
+    if debug:
+        plt.figure(figsize=(20,20))
+        plt.imshow(img)
     return data
 
 
@@ -265,3 +413,25 @@ def format_scan(sol_data, scan_data):
                            'factors': (factor_x, factor_y)
                            })
     return comparison, data
+
+
+
+
+def match(sol_json, scan_json):
+    # open solution json
+    with open(sol_json) as json_file:
+        data_sol = json.load(json_file)
+    # open scan json
+    with open(scan_json) as json_file:
+        data_scan = json.load(json_file)
+    # check if same exam
+    if data_scan['exam'] != data_sol['exam'] or data_scan['num_boxes'] != data_sol['num_boxes'] or data_scan['exercises'].__len__() != data_sol['exercises'].__len__():
+        print('Error, solution y scanned no coinciden')
+    count = 0
+    for i, exercise in enumerate(data_sol['exercises']):
+        if exercise['sol_marked'] == data_scan['exercises'][i]['student_marked']:
+            count = count + 1
+
+    # print('Grade: ', 10*count/data_scan['exercises'].__len__())
+    return {'num_correct': count, 'total_exercises': data_scan['exercises'].__len__()}
+
